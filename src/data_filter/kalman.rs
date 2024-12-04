@@ -1,3 +1,4 @@
+/// Basic implementation of Kalman filter
 pub struct Kalman {
     estimate: f32,
     error_covariance: f32,
@@ -7,16 +8,10 @@ pub struct Kalman {
 
 impl Kalman {
     /// If your ADC measurements are very noisy:
-    /// Use a larger
-    /// R (e.g., 0.1 to 1.0).
-    /// Use a smaller
-    /// Q (e.g., 0.01).
+    /// Use a larger R (e.g., 0.1 to 1.0) and a smaller Q (e.g., 0.01).
     ///
     /// If your ADC measurements are stable:
-    /// Use a smaller
-    /// R (e.g., 0.001 to 0.01).
-    /// Use a larger
-    /// Q (e.g., 0.1).
+    /// Use a smaller R (e.g., 0.001 to 0.01) and a larger Q (e.g., 0.1).
     #[allow(unused)]
     pub fn new(process_noise: f32, measurement_noise: f32) -> Self {
         Self {
@@ -27,6 +22,7 @@ impl Kalman {
         }
     }
 
+    /// Call this method in loop for get calibrated value
     #[allow(unused)]
     pub fn update(&mut self, measurement: f32) -> f32 {
         let kalman_gain = self.error_covariance / (self.error_covariance + self.measurement_noise);
