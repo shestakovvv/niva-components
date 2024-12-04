@@ -1,4 +1,4 @@
-use num_traits::NumOps;
+use num::traits::NumOps;
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]

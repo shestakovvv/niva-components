@@ -1,6 +1,6 @@
 [package]
 name = "niva-components"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["shestakovvv <shestakovvvaleriy@gmail.com>"] # Your name and email
 description = "Embassy undependent components" # Required
@@ -14,7 +14,8 @@ repository = "https://github.com/shestakovvv/niva-components.git" # GitHub repos
 
 [dependencies]
 defmt = "0.3"
-num-traits = "0.2.*"
+num = { version = "0.4", default-features = false }
+
 
 [features]
 default = ["defmt"]
