@@ -2,13 +2,19 @@
 name = "niva-components"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["shestakovvv <shestakovvvaleriy@gmail.com>"] # Your name and email
+description = "Embassy undependent components" # Required
+license = "MIT OR Apache-2.0"  # Specify your license (see SPDX identifiers)
+repository = "https://github.com/shestakovvv/niva-components.git" # GitHub repository URL
+# homepage = "https://yourwebsite.com" # Optional
+# documentation = "https://docs.rs/your_crate" # Optional
+# readme = "README.md"           # Path to your README file (optional but recommended)
+# keywords = ["example", "crate"] # Tags to help users find your crate
+# categories = ["category"]      # Choose from [available categories](https://crates.io/categories)
 
 [dependencies]
 defmt = "0.3"
 num-traits = "0.2.*"
-
 
 [features]
 default = ["defmt"]
